@@ -16,16 +16,18 @@ body {
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-color: var(--main-bg);
 }
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height: auto;
+  align-items: center;
 }
 .card {
+  width: 40%;
   border: 1px solid white;
   background-color: var(--secondary-bg);
   color: var(--text-secondary);
@@ -63,4 +65,26 @@ body {
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 476px) {
+  .container {
+    background-color: #ffffff;
+  }
+  .card {
+    width: 95%;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .icons {
+    font-size: 2em;
+  }
+  .description {
+    font-size: 1.5em;
+  }
+  .btn {
+    padding: 16px;
+    font-size: 2em;
+  }
 }
