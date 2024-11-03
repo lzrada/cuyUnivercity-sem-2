@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/icons/logo.png" alt="logo" class="logo-img" />
+        <h1 class="logo-title">LAZZGHI</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#jasa">JASA</a></li>
+          <li><a href="mailto:lazuardialghifary53@gmail.com">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="btn-cta" onclick="redirInstagram()">Follow Saya</button>
+    </header>
+    <div class="container">
+      <div class="intro">
+        <p class="title">Hello World</p>
+        <p class="description">I'm a web developer</p>
+        <img src="./assets/foto/kucing.jpg" alt="kucing" class="img-foto" />
+      </div>
+    </div>
+
+    <div class="parallax">
+      <div class="tentang">
+        <p class="title">Aku Adalah kucing</p>
+        <p class="description">I'm Cat web developer specialist Front End</p>
+        <div class="mt-10">
+          <button class="btn-cta" onclick="redirWhatsapp()">Mari Kerjasama</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card" id="jasa">
+          <div class="card-item">
+            <img src="./assets/icons/iconSatu.png" alt="icon satu" class="icon" />
+            <p class="card-title">Saya programer murah</p>
+            <p class="card-description">Biaya jasa saya pasti murah dan terjamin</p>
+          </div>
+          <div class="card-item">
+            <img src="./assets/icons/iconDua.png" alt="icon dua" class="icon" />
+            <p class="card-title">Melayani segala bahasa</p>
+            <p class="card-description">Sangat profesional dan terpercaya untuk pemrograman</p>
+          </div>
+          <div class="card-item">
+            <img src="./assets/icons/iconTiga.png" alt="icon tiga" class="icon" />
+            <p class="card-title">Saya terbukti Profesional</p>
+            <p class="card-description">Saya memiliki banyak hasil dari client terpercaya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="title">&copy Copyright 2024. All rights reserved.</p>
+    </footer>
+    <script>
+      function redirInstagram() {
+        window.location.href = "https://www.instagram.com/lzrfalda/";
+      }
+      function redirWhatsapp() {
+        window.location.href = "https://wa.me/081336796507";
+      }
+    </script>
+  </body>
+</html>
