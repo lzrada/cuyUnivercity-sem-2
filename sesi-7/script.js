@@ -1,5 +1,7 @@
 const pertanyaan = document.getElementById("pertanyaan");
 const jawaban = document.getElementById("jawaban");
+const loaders = document.getElementById("loaders");
+const container = document.getElementsByClassName("container");
 
 let init = 0;
 
@@ -17,6 +19,10 @@ pertanyaan.innerHTML = botSay()[0];
 
 let userData = [];
 function botStart() {
+  if (jawaban.value === "") {
+    alert("silahkan jawab terlebih dahulu");
+    return;
+  }
   init++;
   if (init === 1) {
     botDelay({ nama: jawaban.value });
@@ -34,11 +40,13 @@ function botStart() {
 }
 
 function botDelay(jawabanUser) {
-  console.log({ userData: userData });
-
+  loaders.style.display = "block";
+  container[0].style.filter = "blur(8px)";
   setTimeout(() => {
     pertanyaan.innerHTML = botSay(jawabanUser)[init];
-  }, 1250);
+    loaders.style.display = "none";
+    container[0].style.filter = "none";
+  }, 1000);
   userData.push(jawaban.value);
   jawaban.value = "";
 }
@@ -48,5 +56,6 @@ function finishing() {
 }
 
 function botEnd() {
+  alert(`terimakasih ${userData[0]} Telah berkunjung dan Menggunakan Bot Fake di tunggu lagi kedatangannya`);
   window.location.reload();
 }
